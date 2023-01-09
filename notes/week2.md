@@ -23,41 +23,41 @@ By splitting into 3 piles.
 
 ### Multi-Bit
 
-   *1 *1
-    0 1 1 0      =  4 + 2 = 6
-+   0 0 1 1      =  2 + 1 = 3
-___________
-    1 0 0 1      =  8 + 1 = 9
+       *1 *1
+        0 1 1 0      =  4 + 2 = 6
+    +   0 0 1 1      =  2 + 1 = 3
+    ___________
+        1 0 0 1      =  8 + 1 = 9
 
 **But is this the correct SIGNED TWOS-COMPLIMENT NUMBER?**
 >>  No. Why Not?
 
 ### Multi-bit addition, with SIGNED TWOS-COMPLIMENT
 
-    0 1 1 0      = 
-+   0 0 1 1      =  
-___________
-    1 0 0 1      =  
+        0 1 1 0      = 
+    +   0 0 1 1      =  
+    ___________
+        1 0 0 1      =  
 
 1 0 0 1 -> *flip bits* -> 0110
 
----> 0 1 1 0 --> -7
-   +       1
-   _________
-     0 1 1 1 --> +7
+    ---> 0 1 1 0 --> -7
+       +       1
+       _________
+         0 1 1 1 --> +7
 
 
 ### The Half-Adder
 
-A - (           ) - Result
-B - (           ) - CarryOut
+    A - (           ) - Result
+    B - (           ) - CarryOut
 
 
 ### The Full-Adder
 
-      A - (           ) -  Result
-      B - (           ) 
-CarryIn - (           ) -  CarryOut
+          A - (           ) -  Result
+          B - (           ) 
+    CarryIn - (           ) -  CarryOut
 
 
 ### More notes:
