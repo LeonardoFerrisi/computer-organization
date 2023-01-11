@@ -1,6 +1,6 @@
-# Week 2
-
+# Week 2: Day 1
 ## Day 3
+#
 
 Starting off with the coin problem
 
