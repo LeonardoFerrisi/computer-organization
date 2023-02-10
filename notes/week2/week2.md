@@ -100,3 +100,7 @@
 
 **We want to be adding larger values however**
 
+### We can chain them together:
+
+![RippleCarryAdder](img/ripple_carry.png)
+
