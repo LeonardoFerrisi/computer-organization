@@ -1,3 +1,15 @@
+# Instruction Word Basics
+
+**Basic Reference**:
+
+| Instruction Type | Immediate? | sw  | lw | 2bits | 3bits | 3bits | 3bits  |
+|------------------|------------|-----|----|-------|-------|-------|--------|
+|   R - Type       |      0     |  0  | 0  |  OP   | WA    |  RA1  |   RA2  |
+|   I - Type       |      1     |  0  | 0  |  OP   | WA    |  RA1  |   IMM  |
+|   LW (Load Word) |      1     |  0  | 1  |  OP   | WA    |  RA1  | OFFSET |
+|  SW (Store Word) |      1     |  1  | 0  |  OP   | RA2   |  RA1  | OFFSET |
+
+
 # Writing Instructions into Logisim Circuits
 
 There comes a point in your logisim journey where you have enough inputs for you now full CPU that manually inputing the 

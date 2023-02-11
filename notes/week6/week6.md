@@ -2,15 +2,16 @@
 
 | Command | Meaning                          | Syntax | Example |
 |---------|----------------------------------|-----------------|------|
-| slt     | Store if Less Than               |   slt `<store addr>` `<address>` `<comparison addr>`   |
-| sgt     | Store if Greater Than            |        |
-| blt     | Branch if Less Than              |        |
-| bne     | Branch if Not Equal              |        |
-| beq     | Branch if Equal                  |        |
-| ble     | Branch if Less Than or Equal To  |        |
-| jal     | Jump and Link                    |        |
-| j       | Jump                             |        |
-| move    | Move                             |        |
+| slt     | Store if Less Than               |   slt `<store addr>` `<address>` `<comparison addr>`     |
+| sgt     | Store if Greater Than            |   sgt `<store addr>` `<address>` `<comparison addr>`     |
+| blt     | Branch if Less Than              |   blt `<address>` `<comparison addr>` `<branch label>`   |
+| bne     | Branch if Not Equal              |   bne `<address>` `<comparison addr>` `<branch label>`   |
+| beq     | Branch if Equal                  |   beq `<address>` `<comparison addr>` `<branch label>`   |
+| ble     | Branch if Less Than or Equal To  |   ble `<address>` `<comparison addr>` `<branch label>`   |
+| jal     | Jump and Link                    |   jal `<jump label>`  |
+| j       | Jump                             |   j `<jump label>`  |
+| jr      | Jump to Register                 |   jr `$ra  (register address)`  |
+| move    | Move                             |   move `<into value of register1>` `<from value of register2>` |
 
 #
 
