@@ -191,5 +191,114 @@ AKA....
 
 # **RECURSION**
 
+#
+# 2/15/2023 Subroutines Continued
+
+* The Stack
+* Recursion
+* Oath
+
+## Subroutine Convention
+* scope
+
+**Across a subroutine call, we take a leap of faith**
+
+We must trust that
+
+* Certain registers are preserved
+    * $sp
+    * $RA
+    * $s0 ... $s7
+
+## Subroutines:
+
+* If non-leaf --> **They have to push the return address ($RA) onto the stack**
+* If they modify $s0 ... $s7 - **must be restored**
+
+main: 
+
+                li $t0 4                # load immediate
+                addi $SP $SP 4
+                sw $t0 0($SP)
+                    
+            --> jal foo
+                : 
+                lw $t0 0($SP)
+                add $SP $SP 4
 
 
+**OATH**
+
+![OATH](OATH.png)
+
+
+**Example**
+
+C -Code: **Factorial**
+
+        int Fact( int n )
+        {
+                if (n==0){
+                        return 1
+                }
+                else{
+                        return n * Fact(n-1)
+                }
+        }
+
+
+
+**Recursive subroutines are ALWAYS non-leaf**
+* `$SP` is `Stack-Pointer`
+
+**How to multiply?**
+
+--> Use assembly command `mul`
+
+Assembly:
+
+        main:
+                li $a0 5
+                jal fact
+        
+        fact: 
+                bne $a0 $0 else
+                li $v0 1
+                jr $ra
+
+        else:                           # We are shift back by -8 bc two spots
+                addi $SP $SP -8         # Push 2 move values onto stack
+                sw $RA 4($SP)           # Making room and then preseve $ra
+                sw $a0 0($SP)
+
+                addi $a0 $a0 -1
+                jal fact
+
+                lw $a0 0($SP)           # Pop a value off
+                addi $SP $SP 4
+
+                mul $v0 $v0 $a0
+
+                lw $ra 4 ($SP)
+                addi $SP $SP 8
+
+                jr $ra
+
+
+**the Stack**, visualized:
+
+        $v0:
+        $a0: 5
+        $RA: ***
+
+
+                |                       |
+                |                       |
+                |                       |
+                |                       |
+                |                       |
+                |                       |
+                |           *           |
+        $SP --> |           5           |
+                |           ~           |
+                 ________________________
