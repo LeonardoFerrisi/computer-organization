@@ -301,4 +301,42 @@ Assembly:
                 |           *           |
         $SP --> |           5           |
                 |           ~           |
-                 ________________________
+                 _______________________
+
+**the HEAP**, visualized
+                 
+                 _______________________
+                |                       |
+                |                       |
+                |                       |
+                |                       |
+                |                       |
+                |                       |
+                |           *           |
+        $SP --> |           5           |
+                |           ~           |
+
+
+#
+
+# Linked Lists
+
+Each node has:
+* Its own data
+* A pointer to the next node
+
+# Some info on CPUs
+
+                 [    ]   [     ]
+        [ IF ] > [ RR ] > [ ALU ] > [ DM ] > [ WB ]
+                 [    ] > [     ]
+
+Where:
+* IF = 
+* RR = 
+* ALU = 
+* DM = 
+* WB = 
+
+# Class Exercise
+                
