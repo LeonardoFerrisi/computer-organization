@@ -319,17 +319,25 @@ Assembly:
 
 #
 
+### 2/17/2023
+
 # Linked Lists
 
 Each node has:
 * Its own data
 * A pointer to the next node
 
-# Some info on CPUs
+**For more information see notes on lab7**
 
-                 [    ]   [     ]
-        [ IF ] > [ RR ] > [ ALU ] > [ DM ] > [ WB ]
-                 [    ] > [     ]
+
+
+# Some info on Single-Cycle Architecture
+
+        A Crude Diagram: 
+
+                     [    ]       [     ]
+        [ IF ] ----> [ RR ] ----> [ ALU ] ----> [ DM ] ----> [ WB ]
+                     [    ] ----> [     ]
 
 Where:
 * IF = 
@@ -338,5 +346,14 @@ Where:
 * DM = 
 * WB = 
 
+**There always a slight delay within and between components in a full processor**
+
 # Class Exercise
-                
+
+## What is *Thruput*?
+
+Thruput is usually operations per unit of time. For this class exercise,
+we demonstated an "operation" as the divided assembly of paper airplanes with multiple people. In the case **thruput** would refer to airplanes made per minute.
+
+* Latency = minutes to finish one airplane (time to complete a single operation)
+* Thruput = airplanes per minute (operations per unit time)
